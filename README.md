@@ -126,12 +126,6 @@ Always: check robots.txt, respect ToS, mind GDPR/CCPA, and use public data only.
 
 ---
 
-Maintained as an educational resource. Last updated: December 2025
-❌ Authentication circumvention
-❌ Extracting private data
-❌ Violating Terms of Service
-❌ Deceptive practices
-
 ### Legal Compliance
 Scraping legality varies by jurisdiction and use case. Always:
 1. Check `robots.txt` and respect directives
