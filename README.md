@@ -156,11 +156,17 @@ After completing this repository, you'll understand:
 ## 🧩 Who This Is For
 
 ✅ **Data Engineers** — Building extraction infrastructure
+
 ✅ **AI/ML Engineers** — Gathering training data
+
 ✅ **Backend Developers** — Integrating web data
+
 ✅ **Researchers** — Understanding web technologies
+
 ✅ **Entrepreneurs** — Building data platforms
+
 ✅ **Students** — Learning systems thinking
+
 ✅ **Security Professionals** — Analyzing defenses
 
 ❌ **NOT for**: Bypassing security, violating ToS, or extracting private information
