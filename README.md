@@ -2,42 +2,29 @@
 
 **A Comprehensive, System-Level Guide to Web Intelligence and Intelligent Data Collection**
 
-[![Status](https://img.shields.io/badge/Focus-Production--Ready-blue)]() [![Ethics](https://img.shields.io/badge/Standard-Ethical-green)]() [![Future](https://img.shields.io/badge/Vision-AI--Agent--Ready-purple)]()
+[![Status](https://img.shields.io/badge/Focus-Production--Ready-blue)]() [![Ethics](https://img.shields.io/badge/Standard-Ethical-green)]() [![Future](https://img.shields.io/badge/Vision-AI--Agent--Ready-orange)]()
 
 ---
 
 ## 🚀 Overview
 
-The web generates more valuable data than any human institution could curate, yet most of it is **not accessible via APIs**. Companies like Yutori, Reworkd, and Firecrawl are building AI-powered systems that autonomously extract and understand this data. This repository provides the **foundational knowledge** needed to understand how such systems work.
+The web generates more valuable data than any human institution could curate, yet most of it is **not accessible via APIs**. Companies like Yutori, Reworkd, and Firecrawl are building AI-powered systems to extract and structure this information.
 
-Rather than teaching "how to scrape," this project teaches **how the web actually works**—from HTTP protocols to browser rendering to LLM reasoning. It's designed for engineers building production systems, researchers studying web technologies, and entrepreneurs creating the next generation of data intelligence platforms.
+Rather than teaching "how to scrape," this project teaches **how the web actually works**—from HTTP protocols to browser rendering to LLM reasoning. It's designed for engineers building production systems that extract public web data responsibly.
 
 ### What Makes This Different
 
 - ✅ **System-first approach** — Understand the 'why' before the 'how'
-# Web Data Extraction Systems
-
-**System-level guide to extracting public web data responsibly**
-
-Badges: production-ready · ethical · AI-agent-ready
-
----
-
-## Overview
-
-The web holds valuable public data that rarely ships with APIs. This repo focuses on **how the web works** (HTTP, rendering, security, ethics) so you can build reliable, responsible extractors — including modern AI/LLM-powered approaches.
-
-What’s inside:
-- HTTP and browser fundamentals
-- Static vs dynamic DOM, JS rendering
-- Strategy selection: HTML parsing, headless browsers, AI agents
-- Security challenges and respectful behavior
-- Legal/ethical guardrails
-- Runnable Python examples (8 scripts)
+- ✅ **HTTP and browser fundamentals** — Learn how data actually flows
+- ✅ **Static vs dynamic DOM** — Detect and handle JS rendering
+- ✅ **Strategy selection** — HTML parsing, headless browsers, or AI agents
+- ✅ **Security challenges** — Avoid getting blocked
+- ✅ **Legal/ethical guardrails** — Do it right from day one
+- ✅ **Runnable Python examples** — 8 practical scripts to learn from
 
 ---
 
-## Repo Map (read in order)
+## 📂 Repository Structure
 
 ```
 web-data-extraction-systems/
@@ -48,92 +35,52 @@ web-data-extraction-systems/
 ├─ security-challenges/   (avoid getting blocked)
 ├─ ethics-and-legality/   (do it right)
 ├─ experiments/           (8 runnable examples)
+├─ references/            (blogs, papers, tools)
 └─ startup-context/       (AI agent landscape)
 ```
 
 ---
 
-## Quick Start
+## ⚡ Quick Start
 
-Install:
+### Install Dependencies
+
 ```bash
 pip install requests beautifulsoup4 playwright
 playwright install
 ```
 
-Run examples:
+### Run Examples
+
 ```bash
+# Basic HTTP with retry logic
 python experiments/http_request_with_retry.py
+
+# DOM parsing example
 python experiments/dom_parsing_example.py
+
+# JavaScript rendering
 python experiments/js_rendering_example.py
+
+# Structured output (JSON/CSV)
 python experiments/dom_to_json_csv.py
+
+# Network inspection
 python experiments/network_inspection_example.py
+
+# Real-world job market demo
 python experiments/job_market_demo.py
 ```
 
 ---
 
-## Key Ideas (one-liners)
+## 💡 Key Concepts
 
-- If data is not in View Source, it’s loaded via JS/network calls.
-- 90% of failures are HTTP misunderstandings (headers, status, cookies).
-- Choose strategy to match the site: simple parse vs headless vs agent.
-- Respect robots.txt, rate limits; avoid CAPTCHAs and private data.
-- AI agents help with complex, changing, or semantic extractions.
-
----
-
-## What You’ll Learn
-
-| Topic | Outcome |
-|-------|---------|
-| HTTP + headers | Fewer 403/429 surprises |
-| Rendering paths | Detect static vs dynamic content |
-| Strategy choice | Match tool to page complexity |
-| Security signals | Avoid triggering blocks |
-| Ethics/legal | Stay compliant and professional |
-| AI agents | Understand the emerging landscape |
-
----
-
-## Audience & Use Cases
-
-- Data/ML engineers: pipelines, RAG data, monitoring
-- Backend engineers: API-facing data collection
-- Researchers/students: learn real web internals
-- Founders: build data/agent products
-- Security analysts: study defenses
-
----
-
-## Ethics & Boundaries
-
-This repo **teaches** web fundamentals, respectful crawling, and production patterns.
-
-It **does not teach or endorse**: CAPTCHA bypassing, auth circumvention, private data scraping, ToS violations, or deceptive practices.
-
-Always: check robots.txt, respect ToS, mind GDPR/CCPA, and use public data only.
-
----
-
-## Next Steps
-
-1) Skim `architecture/` and `dom-and-rendering/`
-2) Pick a strategy in `scraping-strategies/`
-3) Run the scripts in `experiments/`
-4) Read `security-challenges/` and `ethics-and-legality/`
-5) Glance at `startup-context/` for AI-agent trends
-
----
-
-### Legal Compliance
-Scraping legality varies by jurisdiction and use case. Always:
-1. Check `robots.txt` and respect directives
-2. Review site Terms of Service
-3. Understand GDPR/CCPA for personal data
-4. Consult legal counsel if uncertain
-5. Use public data only
-6. Respect rate limits and resource usage
+- **If data is not in View Source, it's loaded via JS/network calls**
+- **90% of failures are HTTP misunderstandings** (headers, status, cookies)
+- **Choose strategy to match the site**: simple parse vs headless vs agent
+- **Respect robots.txt, rate limits**; avoid CAPTCHAs and private data
+- **AI agents help** with complex, changing, or semantic extractions
 
 ---
 
@@ -155,33 +102,27 @@ After completing this repository, you'll understand:
 
 ## 🧩 Who This Is For
 
-✅ **Data Engineers** — Building extraction infrastructure
-
-✅ **AI/ML Engineers** — Gathering training data
-
-✅ **Backend Developers** — Integrating web data
-
-✅ **Researchers** — Understanding web technologies
-
-✅ **Entrepreneurs** — Building data platforms
-
-✅ **Students** — Learning systems thinking
-
+✅ **Data Engineers** — Building extraction infrastructure  
+✅ **AI/ML Engineers** — Gathering training data  
+✅ **Backend Developers** — Integrating web data  
+✅ **Researchers** — Understanding web technologies  
+✅ **Entrepreneurs** — Building data platforms  
+✅ **Students** — Learning systems thinking  
 ✅ **Security Professionals** — Analyzing defenses
 
 ❌ **NOT for**: Bypassing security, violating ToS, or extracting private information
 
 ---
 
-## 🚀 Getting Started
+## 📖 Learning Paths
 
-### Quick Path
+### Quick Path (30 minutes)
 1. Read `data-ideas/` (5 min) — Understand the problems
 2. Skim `architecture/` (10 min) — Learn HTTP basics
 3. Run `experiments/http_request_with_retry.py` (5 min) — See it work
-4. Explore rest at your own pace
+4. Explore rest at your own pace (10 min)
 
-### Deep Dive Path
+### Deep Dive Path (4-6 hours)
 1. Complete `architecture/` — Master HTTP
 2. Study `dom-and-rendering/` — Understand rendering
 3. Compare `scraping-strategies/` — Choose approach
@@ -191,11 +132,35 @@ After completing this repository, you'll understand:
 
 ---
 
-## 📚 Recommended Reading
+## ⚖️ Ethics & Legal Compliance
 
-- **In this repo**: Start with [data-ideas/](data-ideas/)
+### This Repository Teaches
+✅ Web fundamentals and respectful crawling  
+✅ Production patterns and best practices  
+✅ Understanding public data access
+
+### This Repository Does NOT Teach
+❌ CAPTCHA bypassing  
+❌ Authentication circumvention  
+❌ Private data scraping  
+❌ ToS violations  
+❌ Deceptive practices
+
+### Legal Compliance Checklist
+Scraping legality varies by jurisdiction and use case. Always:
+1. ✅ Check `robots.txt` and respect directives
+2. ✅ Review site Terms of Service
+3. ✅ Understand GDPR/CCPA for personal data
+4. ✅ Consult legal counsel if uncertain
+5. ✅ Use public data only
+6. ✅ Respect rate limits and resource usage
+
+---
+
+## 📚 Additional Resources
+
 - **Blogs**: See [references/blogs.md](references/blogs.md)
-- **Research**: See [references/papers.md](references/papers.md)
+- **Research Papers**: See [references/papers.md](references/papers.md)
 - **Tools**: See [references/tools.md](references/tools.md)
 
 ---
@@ -212,7 +177,7 @@ After completing this repository, you'll understand:
 
 ---
 
-**Ready to master web data extraction? Start exploring now!** 🚀
+## 🚀 Get Started Now!
 
 - **First time?** → Start with [data-ideas/](data-ideas/)
 - **Prefer learning by doing?** → Jump to [experiments/](experiments/)
@@ -223,77 +188,3 @@ After completing this repository, you'll understand:
 *This repository is maintained as a comprehensive educational resource and is regularly updated as web technologies and best practices evolve.*
 
 *Last updated: December 2025*
-
----
-
-## ▶️ Running the Project
-
-### Install dependencies
-
-```bash
-pip install requests beautifulsoup4 playwright
-playwright install
-```
-
-### Run HTTP example
-
-```bash
-python experiments/http_request_with_retry.py
-```
-
-### Run DOM parsing + structured output
-
-```bash
-python experiments/dom_to_json_csv.py
-```
-
-### Run JavaScript-rendered page demo
-
-```bash
-python experiments/js_rendering_example.py
-```
-
-### Run job-market demo
-
-```bash
-python experiments/job_market_demo.py
-```
-
----
-
-## 🧠 What This Repository Demonstrates
-
-By the end of this repo, you understand:
-
-* Why APIs don’t exist for many datasets
-* How browsers actually load content
-* Why scraping fails in production
-* How to design respectful crawlers
-* How modern AI agents interact with the web
-
-This is **systems knowledge**, not surface-level scraping.
-
----
-
-## ⚠️ Ethical Disclaimer
-
-This repository:
-
-* Does not bypass CAPTCHA
-* Does not scrape private or authenticated data
-* Does not violate Terms of Service
-* Is intended for **education and research**
-
----
-
-## 🧩 Who This Is For
-
-* Students learning web systems
-* Data engineers
-* Backend engineers
-* AI agent developers
-* Startup engineers
-* Anyone curious about the real web
-
----
-
