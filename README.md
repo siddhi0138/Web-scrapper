@@ -15,441 +15,118 @@ Rather than teaching "how to scrape," this project teaches **how the web actuall
 ### What Makes This Different
 
 - ✅ **System-first approach** — Understand the 'why' before the 'how'
-- ✅ **Production-ready patterns** — Real-world error handling, rate limiting, retries
-- ✅ **Ethical by design** — No bypassing, no ToS violations, fully compliant
-- ✅ **AI-ready architecture** — Foundation for building agentic systems
-- ✅ **Runnable code** — 8+ working examples you can execute immediately
+# Web Data Extraction Systems
+
+**System-level guide to extracting public web data responsibly**
+
+Badges: production-ready · ethical · AI-agent-ready
 
 ---
 
-## 🎯 Why This Matters
+## Overview
 
-### Real-World Data Problems
+The web holds valuable public data that rarely ships with APIs. This repo focuses on **how the web works** (HTTP, rendering, security, ethics) so you can build reliable, responsible extractors — including modern AI/LLM-powered approaches.
 
-Most valuable datasets share three characteristics:
-
-1. **Public visibility** — Data is displayed on websites
-2. **No API** — Organizations don't expose this via structured endpoints
-3. **Fragmentation** — Data is scattered across many sites
-
-**Examples:**
-- Job market intelligence (salaries, skills demand, hiring patterns)
-- E-commerce pricing dynamics (competitor monitoring, price elasticity)
-- Real-estate market signals (property valuations, investment trends)
-- Academic research tracking (paper citations, researcher networks)
-- Travel/hospitality availability (inventory patterns, pricing)
-
-### The Market Shift
-
-The web data extraction industry is undergoing a paradigm shift from brittle selectors to AI-powered agents that reason, adapt, and self-heal.
+What’s inside:
+- HTTP and browser fundamentals
+- Static vs dynamic DOM, JS rendering
+- Strategy selection: HTML parsing, headless browsers, AI agents
+- Security challenges and respectful behavior
+- Legal/ethical guardrails
+- Runnable Python examples (8 scripts)
 
 ---
 
-## 🏗️ Repository Architecture
-
-The repository is organized as **layers of understanding**, each building on the previous:
+## Repo Map (read in order)
 
 ```
 web-data-extraction-systems/
-│
-├── 📊 data-ideas/              [Why extract? What problems to solve?]
-│   ├── job-market-intelligence.md
-│   ├── ecommerce-price-tracking.md
-│   └── real-estate-signals.md
-│
-├── 🔌 architecture/            [How does the web communicate?]
-│   ├── http-basics.md
-│   ├── http-keywords.md
-│   ├── request-response-flow.md
-│   └── cookies-sessions.md
-│
-├── 🎨 dom-and-rendering/       [How do pages become visible?]
-│   ├── static-vs-dynamic-dom.md
-│   ├── dom-inspection.md
-│   ├── javascript-rendering.md
-│   ├── js-rendering-deep-dive.md
-│   └── shadow-dom.md
-│
-├── 🛠️ scraping-strategies/     [How to extract the data?]
-│   ├── static-html-scraping.md
-│   ├── js-rendered-scraping.md
-│   ├── headless-browsers.md
-│   ├── ai-agents-scraping.md
-│   └── llm-powered-extraction.md
-│
-├── 🛡️ security-challenges/     [Why does scraping fail?]
-│   ├── captcha.md
-│   ├── ip-rotation.md
-│   ├── ip-blocking-rate-limits.md
-│   ├── bot-detection.md
-│   ├── rate-limiting.md
-│   └── anti-bot-evasion-for-agents.md
-│
-├── ⚖️ ethics-and-legality/     [How to extract responsibly?]
-│   ├── robots-txt.md
-│   └── legal-considerations.md
-│
-├── 💡 experiments/             [Runnable, working examples]
-│   ├── utils.py
-│   ├── http_request_example.py
-│   ├── http_request_with_retry.py
-│   ├── dom_parsing_example.py
-│   ├── dom_to_json_csv.py
-│   ├── js_rendering_example.py
-│   ├── network_inspection_example.py
-│   └── job_market_demo.py
-│
-├── 🤖 startup-context/         [How do AI agents use this?]
-│   └── yutori-analysis.md
-│
-└── 📚 references/              [Grounding in research & industry]
-    ├── blogs.md
-    ├── papers.md
-    └── tools.md
+├─ data-ideas/            (what to collect)
+├─ architecture/          (HTTP, cookies, flow)
+├─ dom-and-rendering/     (static vs dynamic)
+├─ scraping-strategies/   (pick an approach)
+├─ security-challenges/   (avoid getting blocked)
+├─ ethics-and-legality/   (do it right)
+├─ experiments/           (8 runnable examples)
+└─ startup-context/       (AI agent landscape)
 ```
 
-**Learning path**: data-ideas → architecture → dom-and-rendering → strategies → security → ethics → experiments → startup-context
-
 ---
 
-## 📁 data-ideas/ — *What Data Is Valuable*
+## Quick Start
 
-This folder explores **real-world datasets** that are:
-
-* Valuable
-* Publicly visible
-* Not available via APIs
-
-Covered domains include:
-
-* Job market intelligence
-* E-commerce pricing signals
-* Real-estate micro-trends
-
-The focus here is **problem framing**, not extraction.
-
----
-
-## 📁 architecture/ — *How the Web Communicates*
-
-This section covers **HTTP fundamentals**, which are essential for any form of web automation.
-
-Topics include:
-
-* HTTP methods (`GET`, `POST`)
-* Headers (`User-Agent`, `Accept`, `Authorization`)
-* Status codes (`200`, `301`, `403`, `429`, `5xx`)
-* Cookies and session management
-* Request–response lifecycle
-
-> Most scraping failures are **HTTP misunderstandings**, not coding errors.
-
----
-
-## 📁 dom-and-rendering/ — *How Pages Become Visible*
-
-Modern websites rarely serve complete data in raw HTML.
-
-This folder explains:
-
-* Static vs dynamic DOM
-* JavaScript rendering
-* AJAX / Fetch / XHR calls
-* Shadow DOM usage
-* DOM inspection using browser dev tools
-
-Key insight:
-
-> If data isn’t in *View Source*, it’s probably coming from a network request.
-
----
-
-## 📁 scraping-strategies/ — *Choosing the Right Approach*
-
-Not all pages should be scraped the same way.
-
-This section discusses:
-
-* Static HTML scraping
-* JavaScript-rendered scraping
-* Headless browsers (Playwright/Selenium)
-* When **not** to scrape at all
-
-The emphasis is on **decision-making**, not brute force.
-
----
-
-## 📁 security-challenges/ — *Why Automation Breaks*
-
-This folder explains common defensive mechanisms used by websites:
-
-* CAPTCHA (conceptual explanation only)
-* IP blocking
-* Rate limiting
-* Bot detection and behavioral analysis
-
-⚠️ **No bypass techniques are included.**
-Understanding exists to **avoid triggering defenses**, not defeat them.
-
----
-
-## 📁 ethics-and-legality/ — *Responsible Engineering*
-
-This section establishes **clear boundaries**:
-
-* `robots.txt` interpretation
-* Crawl-delay
-* Terms of Service awareness
-* Public vs private data distinction
-
-This ensures the repository is **safe, professional, and compliant**.
-
----
-
-## 📁 experiments/ — *Runnable Demonstrations*
-
-This is where theory becomes executable.
-
-Included examples demonstrate:
-
-* HTTP requests with headers
-* Retry logic with exponential backoff
-* Rate limiting
-* DOM parsing with BeautifulSoup
-* JavaScript rendering using Playwright
-* Network request inspection
-* Structured output (JSON / CSV)
-* A realistic job-market scraping demo (ethical)
-
-These examples are **production-inspired**, not toy scripts.
-
----
-
-## 📁 startup-context/ — *Future-Facing Perspective*
-
-This section connects the repo to **modern AI agent startups**, such as **Yutori**.
-
-It explains how:
-
-* LLMs reason over web pages
-* Agents plan actions (click, scroll, fill)
-* DOM state becomes input to AI systems
-* Safety and compliance are enforced
-
-This repo forms the **foundational layer** for such agent systems.
-
----
-
-## 📁 references/ — *Research & Industry Grounding*
-
-Includes:
-
-* Curated blog articles
-* Foundational research papers
-* Practical tools and libraries
-
-This anchors the project in **real research and industry practice**.
-
----
-
-## ▶️ Quick Start
-
-### Installation
+Install:
 ```bash
-# Python 3.9+
-python --version
-
-# Install dependencies
 pip install requests beautifulsoup4 playwright
 playwright install
 ```
 
-### Run Examples
+Run examples:
 ```bash
-# HTTP with retry logic
 python experiments/http_request_with_retry.py
-
-# Parse HTML and extract data
 python experiments/dom_parsing_example.py
-
-# Render JavaScript pages
 python experiments/js_rendering_example.py
-
-# Export to JSON/CSV
 python experiments/dom_to_json_csv.py
-
-# Monitor network requests
 python experiments/network_inspection_example.py
-
-# Complete realistic example
 python experiments/job_market_demo.py
 ```
 
 ---
 
-## 🎓 Learning Path
+## Key Ideas (one-liners)
 
-1. **Understand the problem** → Read `data-ideas/`
-2. **Learn foundations** → Study `architecture/`
-3. **Understand rendering** → Explore `dom-and-rendering/`
-4. **Choose your strategy** → Review `scraping-strategies/`
-5. **Anticipate obstacles** → Study `security-challenges/`
-6. **Build ethically** → Internalize `ethics-and-legality/`
-7. **Get hands-on** → Run `experiments/`
-8. **Think ahead** → Explore `startup-context/`
+- If data is not in View Source, it’s loaded via JS/network calls.
+- 90% of failures are HTTP misunderstandings (headers, status, cookies).
+- Choose strategy to match the site: simple parse vs headless vs agent.
+- Respect robots.txt, rate limits; avoid CAPTCHAs and private data.
+- AI agents help with complex, changing, or semantic extractions.
 
 ---
 
-## 📊 What You'll Learn
+## What You’ll Learn
 
-| Topic | Key Insight | File |
-|-------|-----------|------|
-| **HTTP** | 90% of failures are HTTP misunderstandings | `architecture/` |
-| **DOM** | If data isn't in View Source, JS is loading it | `dom-and-rendering/` |
-| **Strategies** | Different sites need different approaches | `scraping-strategies/` |
-| **Security** | Understanding defenses prevents triggering them | `security-challenges/` |
-| **Ethics** | Build with integrity from day one | `ethics-and-legality/` |
-| **Agents** | AI is reshaping how we extract data | `startup-context/` |
-
----
-
-## 🎯 Use Cases
-
-- **Data Engineers** — Building scalable extraction pipelines
-- **AI/ML Engineers** — Gathering training data, building RAG systems
-- **Backend Engineers** — Designing APIs around web data
-- **Researchers** — Understanding web technologies and automation
-- **Entrepreneurs** — Building the next data platform
-- **Security Professionals** — Analyzing web defenses and vulnerabilities
+| Topic | Outcome |
+|-------|---------|
+| HTTP + headers | Fewer 403/429 surprises |
+| Rendering paths | Detect static vs dynamic content |
+| Strategy choice | Match tool to page complexity |
+| Security signals | Avoid triggering blocks |
+| Ethics/legal | Stay compliant and professional |
+| AI agents | Understand the emerging landscape |
 
 ---
 
-## 💼 Market Context
+## Audience & Use Cases
 
-The web data extraction industry is worth billions and rapidly evolving:
-
-- **Companies like Yutori** are raising $15M+ for AI-powered monitoring
-- **Platforms like Firecrawl** are optimizing extraction for LLM pipelines
-- **Tools like Reworkd** are automating scraper maintenance
-- **Services like Bright Data** are building infrastructure at scale
-
-This repository teaches you the fundamentals that power all of these systems.
+- Data/ML engineers: pipelines, RAG data, monitoring
+- Backend engineers: API-facing data collection
+- Researchers/students: learn real web internals
+- Founders: build data/agent products
+- Security analysts: study defenses
 
 ---
 
-## 🔗 Integration Ecosystem
+## Ethics & Boundaries
 
-### Browser Automation
-- Playwright (cross-browser, modern)
-- Puppeteer (Node.js, Chrome protocol)
-- Selenium (industry standard)
+This repo **teaches** web fundamentals, respectful crawling, and production patterns.
 
-### Data Processing
-- BeautifulSoup (HTML parsing)
-- Requests (HTTP client)
-- Pandas (data manipulation)
+It **does not teach or endorse**: CAPTCHA bypassing, auth circumvention, private data scraping, ToS violations, or deceptive practices.
 
-### LLM Integration
-- OpenAI GPT-4
-- Anthropic Claude
-- Google Gemini
-
-### Infrastructure
-- Bright Data (proxies)
-- Apify (distributed scraping)
-- ScrapingBee (API-first service)
-
-### Frameworks
-- LangChain (LLM agents)
-- CrewAI (multi-agent orchestration)
-- Playwright (modern automation)
+Always: check robots.txt, respect ToS, mind GDPR/CCPA, and use public data only.
 
 ---
 
-## ❓ FAQ
+## Next Steps
 
-**Q: Is web scraping legal?**
-A: It depends on what, how, and where. Public data extraction is generally legal, but subject to ToS, jurisdiction, and data type. Always research your specific case.
-
-**Q: Will I get blocked?**
-A: Only if you ignore ethical principles. Following robots.txt, rate limiting, and human-like behavior keeps you safe.
-
-**Q: Do I need to understand HTTP?**
-A: Yes. Most problems trace back to HTTP misunderstandings, not code bugs.
-
-**Q: Should I use AI agents for everything?**
-A: No. For simple static sites, HTTP + parsing is faster and cheaper. AI agents shine for complex, dynamic, or frequently changing sites.
-
-**Q: How do I know if I'm being detected?**
-A: Monitor for 429 (rate limit), 403 (forbidden), CAPTCHA challenges, or sudden content changes.
-
-**Q: What's the cost?**
-A: HTTP + parsing = pennies. Headless browser = dollars. LLM extraction = tens of cents per page.
+1) Skim `architecture/` and `dom-and-rendering/`
+2) Pick a strategy in `scraping-strategies/`
+3) Run the scripts in `experiments/`
+4) Read `security-challenges/` and `ethics-and-legality/`
+5) Glance at `startup-context/` for AI-agent trends
 
 ---
 
-## 🏆 Key Principles
-
-1. **System-first** — Understand protocols and rendering before writing code
-2. **Ethical** — No bypassing, no ToS violations, fully compliant
-3. **Robust** — Production patterns: retries, error handling, monitoring
-4. **Future-facing** — Aligned with AI agents and modern platforms
-
----
-
-## 💼 Industry Context
-
-The web data extraction market is worth billions and rapidly evolving:
-
-- **$15M+ funding rounds** for AI-powered monitoring platforms (Yutori)
-- **Platforms optimizing for LLMs** (Firecrawl, ScrapeGraphAI)
-- **Enterprise-scale solutions** (Apify, Bright Data, Kadoa)
-- **Shift from selectors to semantics** — Understanding over brittle CSS/XPath
-
-Understanding the fundamentals positions you at the frontier of this evolution.
-
----
-
-## 🔗 Integration Ecosystem
-
-### Browser Automation
-- **Playwright** — Cross-browser, modern, async
-- **Puppeteer** — Chrome/Chromium, Node.js native
-- **Selenium** — Industry standard, multi-language
-
-### Data Processing
-- **BeautifulSoup** — HTML parsing
-- **Requests** — HTTP client
-- **Pandas** — Data manipulation
-
-### AI/LLM Integration
-- **OpenAI GPT-4** — Reasoning and vision
-- **Anthropic Claude** — Strong reasoning
-- **Google Gemini** — Multimodal capabilities
-
-### Infrastructure Services
-- **Bright Data** — Proxies and infrastructure
-- **Apify** — Distributed scraping platform
-- **ScrapingBee** — API-first extraction
-
-### Frameworks
-- **LangChain** — LLM agent building
-- **CrewAI** — Multi-agent orchestration
-- **Playwright** — Modern automation
-
----
-
-## ⚠️ Ethical & Legal Notice
-
-### What This Repository Teaches
-✅ System fundamentals
-✅ HTTP, rendering, DOM
-✅ Ethical extraction patterns
-✅ Security mechanisms
-✅ Legal considerations
-
-### What This Repository Does NOT Teach
-❌ Bypassing CAPTCHA
+Maintained as an educational resource. Last updated: December 2025
 ❌ Authentication circumvention
 ❌ Extracting private data
 ❌ Violating Terms of Service
